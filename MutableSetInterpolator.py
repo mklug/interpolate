@@ -3,7 +3,9 @@ import bisect
 
 
 class MutableSetInterpolator(MutableSet):
-
+    '''Base class for the common functionality of the 
+    linear and piecewise cubic interpolators.  
+    '''
     def __init__(self, xs, ys):
         # Must do any sorting of xs before they are passed here.
         N = len(xs)
