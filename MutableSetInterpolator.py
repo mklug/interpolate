@@ -11,8 +11,8 @@ class MutableSetInterpolator(MutableSet):
         N = len(xs)
         if N < 1:
             raise Exception("Need at least one point.")
-        self.xs = xs
-        self.ys = ys
+        self.xs = list(xs)
+        self.ys = list(ys)
 
     def __contains__(self, x):
         return x in self.xs
